@@ -10,10 +10,10 @@ if (isset($_FILES['file'])) {
         $path = make_upload($_FILES['file']);
         echo json_encode(['response' => $path, 'success' => true]);
     } else {
-        echo json_encode(['response' => 'Image is not valid !!!!', 'success' => false]);
+        echo json_encode(['response' => 'Image is not valid !', 'success' => false]);
     }
 } else {
-    echo json_encode(['response' => 'No images were found !!!!', 'success' => false]);
+    echo json_encode(['response' => 'No images were found !', 'success' => false]);
 }
 ?>
 
