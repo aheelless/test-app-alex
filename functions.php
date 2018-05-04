@@ -13,6 +13,11 @@
   }
   function make_upload($file){
 	$name = mt_rand(0, 10000) . $file['name'];
+
+	if (!is_dir('img')) {
+	    mkdir('img');
+    }
+
 	copy($file['tmp_name'], 'img/' . $name);
 	return 'img/'.$name;
   }
